@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1,maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="mobile-web-app-capable" content="yes"> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+
+    <script src="lib/jquery.js"></script>
+    <link rel="stylesheet" href="lib/swiper-bundle.min.css" />
+    <script src="lib/Swiper.js"></script>
+    <script src="lib/initialize_sp.js" ></script>
+
+
+    <link rel="stylesheet" href="lib/panable-common.css">
+
+
+    <meta name='robots' content='noindex, nofollow' />
+    <title>SPARKS DEMO - .able Journal</title>
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body data-cmplz=1 class="articles_sb-template-default single single-articles_sb postid-2589 logged-in admin-bar no-customize-support wp-embed-responsive singular image-filters-enabled">
+
+
+    <script> $("body").css("background-color","#000000" ); </script>
+
+    <div id="control-height"></div>
+    <div class="rotate-container" style="display:none;">
+        <div class="phone">
+        </div>
+        <div class="message">you can rotate your device for optimal experience
+        </div>
+    </div>
+
+
+    <div id="overlay"  class=" d-flex align-items-center">
+        <div class="content_overlay box w-100">
+            <img src="https://preprod.able-journal.org/wp-content/themes/twentynineteen-child/assets/formats/210909-animation-pan.gif">
+            <div id="progress-bar">
+                <div id="progress"></div>
+                <p>
+                    <span id="prct">0%</span>
+                    <button>I get it</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.panableConfig = {
+                        // start position (0 to 1)
+            "initX": 0,
+                        // leave horizontal for pan.able
+            "direction": 'horizontal', 
+                        // show on screen debug info
+            "debug": false,
+                        // leave this value true
+            "strictMobileScroll": true,
+                        // set your background color
+            "bg": '#000000',
+                        // scroll duration (40 = very quick , 100 = slow)
+            "scrollSpeed":56,
+                        // scroll distance (px)
+            "scrollDistance":2000,
+                        // ratio for mobile portrait (1 = square)
+            "ratio_mobile_portrait":1.3,
+                        // momentum distance (0 to 1)
+            "momentumRatio":0.1,
+                        // momentum speed (0 to 1)
+            "momentumVelocityRatio":0.2,
+                        // scrool speed for touchpad (0 to 1)
+            "touchScrollSensitivity":0.5,
+                        // minimal distance to trigger momentum effect (0.001 = always, 1 = never)
+            "minimumVelocity":0.001,			        
+        };
+    </script>
+    <!-- Panable instance -->
+    <div class="swiper panableElement ">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <!-- TOP -->
+                <div style="z-index:3;" id="wrap-img1" class="swiper-slide-element img1"><img id="img1" data-src="img/Spark/level-3-dektop_251009.avif" data-src-mobile="img/Spark/level-3-dektop_1.png" /></div>
+
+                <!-- MIDDLE -->
+                <div style="z-index:2;" id="wrap-img2" class="swiper-slide-element img2"><img id="img2" data-src="img/Spark/level-2-dektop_251009.avif" data-src-mobile="img/Spark/level-2-dektop_4.png" /></div>
+
+                <!-- BOTTOM -->
+                <div style="z-index:1;" id="wrap-img3" class="swiper-slide-element img3"><img id="img3" data-src="img/Spark/level-1-dektop_251009.avif" data-src-mobile="img/Spark/level-1-dektop_3.png" /></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
